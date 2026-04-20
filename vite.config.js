@@ -29,7 +29,6 @@ export default {
       module: { type: "es6" },
     }),
   ],
-  oxc: false,
   resolve: {
     tsconfigPaths: true,
   },
