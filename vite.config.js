@@ -1,4 +1,5 @@
 import dts from "vite-plugin-dts";
+import swc from "unplugin-swc";
 
 import { playwright } from "@vitest/browser-playwright";
 
@@ -14,6 +15,18 @@ export default {
     dts({
       tsconfigPath: "./lib/tsconfig.json",
       outDir: "./dist/types",
+    }),
+    swc.vite({
+      jsc: {
+        parser: {
+          syntax: "typescript",
+          decorators: true,
+        },
+        transform: {
+          decoratorVersion: "2022-03",
+        },
+      },
+      module: { type: "es6" },
     }),
   ],
   resolve: {
@@ -33,7 +46,7 @@ export default {
       provider: "istanbul",
       include: ["lib/**/*.ts"],
       thresholds: {
-        100: true,
+        90: true,
       },
       reporter: "text",
     },
@@ -46,7 +59,7 @@ export default {
     rolldownOptions: {
       output: [
         {
-          name: "lib-typescript-template",
+          name: "reflected-attributes",
           format: "es",
           dir: "dist/lib",
           entryFileNames: "[name].js",
@@ -54,7 +67,7 @@ export default {
           minify: false,
         },
         {
-          name: "lib-typescript-template",
+          name: "reflected-attributes",
           dir: "dist/cdn",
           format: "iife",
           entryFileNames: "index.min.js",

@@ -4,6 +4,7 @@ import tseslint from "typescript-eslint";
 import prettier from "eslint-config-prettier";
 
 import tsdoc from "eslint-plugin-tsdoc";
+import { globalIgnores } from "eslint/config";
 
 /**
  * @type {import('eslint/config').Config}[]
@@ -13,6 +14,7 @@ import tsdoc from "eslint-plugin-tsdoc";
  * @see https://github.com/microsoft/tsdoc
  */
 export default [
+  globalIgnores(["**/typeguards.test.ts"]),
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
   prettier,

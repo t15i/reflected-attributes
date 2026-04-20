@@ -1,18 +1,24 @@
 {
-  "name": "@gmvrpw/lib-typescript-template",
+  "name": "reflected-attributes",
   "type": "module",
-  "version": "0.0.0",
-  "description": "",
-  "keywords": [],
+  "version": "1.0.0",
+  "description": "Implementation of HTML spec reflected attributes as TypeScript decorators",
+  "keywords": [
+    "Reflected",
+    "reflected attributes",
+    "web components",
+    "decorator",
+    "typescript"
+  ],
   "author": "Aleksandr Boiarnikov <dev@gmvr.pw> (https://gmvr.pw)",
   "license": "MIT",
-  "homepage": "https://github.com/t15i/lib-typescript-template#README",
+  "homepage": "https://github.com/t15i/reflected-attributes#README",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/t15i/lib-typescript-template.git"
+    "url": "git+https://github.com/t15i/reflected-attributes.git"
   },
   "bugs": {
-    "url": "https://github.com/t15i/lib-typescript-template/issues"
+    "url": "https://github.com/t15i/reflected-attributes/issues"
   },
   "unpkg": "./dist/cdn/index.min.js",
   "jsdelivr": "./dist/cdn/index.min.js",
@@ -53,6 +59,7 @@
     "prettier": "^3.8.2",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.58.1",
+    "unplugin-swc": "^1.5.9",
     "vite": "^8.0.8",
     "vite-plugin-dts": "^4.5.4",
     "vitest": "^4.1.4"
