@@ -1,7 +1,7 @@
 {
   "name": "reflected-attributes",
   "type": "module",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Implementation of HTML spec reflected attributes as TypeScript decorators",
   "keywords": [
     "Reflected",
